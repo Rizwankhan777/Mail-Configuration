@@ -1,0 +1,76 @@
+<?php
+
+ob_start();
+
+$pg = ob_get_contents();
+
+$pageTitle = 'Book Writing Services | Best Book Publishing Company In USA';
+
+$description = 'Book publishing company, Book writing services, sell your Books & eBooks easily and become the next Bestseller. We will publish your story into your LEGACY 24/7';
+
+$author = 'Brand Name';
+
+$keywords = "book writing company, writing services, writing services, Top Book Publisher, book writing Services, Story publishing, Book Publishing Company, book writing Services,Story publishing";
+
+$canonical = "Brand URL";
+
+//delete old desc and author
+
+$pg = str_replace('content=""', '', $pg);
+
+//add anew desc and author
+
+$pg = str_replace('name="description"', 'name="description" content="' . $description . '" ', $pg);
+
+$pg = str_replace('name="author"', 'name="author" content="' . $author . '" ', $pg);
+
+$pg = str_replace('name="keywords"', 'name="keywords" content="' . $keywords . '" ', $pg);
+
+$pg = str_replace('rel="canonical"', 'rel="canonical" href="' . $canonical . '" ', $pg);
+
+ob_end_clean();
+
+ob_end_clean();
+
+echo str_replace('%TITLE%', $pageTitle, $pg);
+
+?>
+
+
+
+wesbsites keywords
+
+in head tag
+  <title>%TITLE%</title>
+
+<?php
+ob_start();
+include ('header.php');
+$pg = ob_get_contents();
+$pageTitle = 'Home | Gulxavi Tech';
+$description = 'Gulxavi Tech offers Wordpress Development,Video Animation others Serives in UK';
+$pg = str_replace('content=""', '', $pg);
+//add anew desc and author
+$pg = str_replace('name="description"', 'name="description" content="' . $description . '" ', $pg);
+$pg = str_replace('name="author"', 'name="author" content="' . $author . '" ', $pg);
+$pg = str_replace('name="keywords"', 'name="keywords" content="' . $keywords . '" ', $pg);
+ob_end_clean();
+echo str_replace('%TITLE%', $pageTitle, $pg); ?>
+
+
+academic keywords
+<?php ob_start();
+  include('header.php');
+  $pg=ob_get_contents();
+  $pageTitle='Pay Someone to Take My Online Class for Me Best Online Class Help in USA | Top Class Geeks';
+  $description = 'Best Online Class Help service In USA that will get you highest grades! If you are looking to pay someone to take my online class for me, Contact Pay for online classes takers. ';
+  $author = '';
+  $keywords="   ";
+  //delete old desc and author
+  $pg = str_replace('content=""', '', $pg);
+  //add anew desc and author
+  $pg = str_replace('name="description"', 'name="description" content="'.$description.'" ', $pg);
+  $pg = str_replace('name="author"', 'name="author" content="'.$author.'" ', $pg);
+  $pg = str_replace('name="keywords"', 'name="keywords" content="'.$keywords.'" ', $pg);
+  ob_end_clean();
+  echo str_replace('%TITLE%',$pageTitle,$pg);?>
